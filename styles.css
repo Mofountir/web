@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+a {
+    text-decoration: 0;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+body {
+    background-color: #111;
+}
+section {
+    margin-top: 50px;
+}
+
+header {
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 5%;
+
+}
+header  .logo a {
+    font-size: 25px;
+    color: #29d9d5;
+ 
+}
+header  .logo a span {
+    color: #fff;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.menu li  {
+    margin: 0 15px;
+    list-style-type: none;
+}
+.menu li a {
+    color: #fff;
+    font-size: 14px;
+}
+.login {
+    color: #29d9d5;
+    font-size: 14px;
+    border: 2px solid #29d9d5;
+    border-radius: 10px;
+    padding: 5px 20px;
+    transition: 0.5s;
+    font-weight: bolder;
+}
+.login:hover {
+    background-color: #29d9d5;
+    color: #fff;
+ 
+}
+/*depart*/
+
+.villes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.gare {
+    color: #29d9d5;
+    background-color: #222;
+    font-size: 14px;
+    border: 2px solid #29d9d5;
+    border-radius: 10px;
+    padding: 5px 20px;
+    transition: 0.5s;
+    font-weight: bolder;
+    padding: 18px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.gare.active {
+    background-color: #29d9d5;
+    color: #fff;
+}
+
+.gare:hover {
+    background-color: #29d9d5;
+    color: #fff;
+}
+
+/*Login page*/
+.container{
+    background-color: #222;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: absolute;
+    overflow: hidden;
+    width: 80%; 
+    max-width: 768px; 
+    min-height: 480px;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span{
+    font-size: 12px;
+}
+
+.container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button{
+    background-color: #29d9d5;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container form{
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    color: #ccc;
+    z-index: 2;
+}
+
+.sign-in form > a{
+    color: #ccc;
+}
+
+.container.active .sign-in{
+    transform: translateX(100%);
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.sign-up span, h1{
+    color: #ccc;
+}
+
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+
+
+.social-icons{
+    margin: 20px 0;
+}
+
+.social-icons a{
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    background-color: #29d9d5;
+    height: 100%;
+    background: linear-gradient(to right, #2d9492, #29d9d5);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right{
+    transform: translateX(200%);
+}
+
+/* Home acceuil CSS */
+
+#home {
+    background: linear-gradient(rgba(0,0,0,0.1),#333);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#home video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pour ajuster la taille de la vidéo */
+}
+
+
+
+.find_trip {
+    background-color: #222;
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -50px;
+}
+.find_trip form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.find_trip form div , .find_trip form input[type="submit"]{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.find_trip form label {
+    color: #999;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.find_trip form input {
+    padding: 5px 20px;
+    background-color: transparent;
+    border: 1px solid #29d9d5;
+    outline: 0;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #fff;
+}
+.find_trip form input[type="submit"] {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #29d9d5;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.find_trip form input[type="submit"]:hover {
+    box-shadow: 0 0 10px #29d9d5;
+}
+
+/*A propos CSS*/
+#a-propos {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 0 10%;
+    width: 100%;
+}
+.title {
+    text-transform: capitalize;
+    margin: 70px 0;
+    font-weight: bold;
+    color: #29d9d5;
+    position: relative;
+    margin-left:15px;
+    font-size: 18px;
+
+}
+.title::after {
+    position: absolute;
+    left: -15px;
+    content: "";
+    height: 100%;
+    background-color: #fff;
+    width: 5px;
+}
+.img-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.img-desc .left {
+    position: relative;
+    margin-left: 10px;
+    height: 250px;
+    width: 40%;
+}
+.img-desc .right {
+    width: 57%;
+}
+
+.img-desc .left video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 0 10px #29d9d5;
+}
+.img-desc .left::after {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    content: "";
+    height: 100%;
+    background-color: #29d9d5;
+    width: 100%;
+    z-index: -1;
+}
+.img-desc .right h3 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 20px;
+
+}
+.img-desc .right p {
+    color: #999;
+    font: 14px;
+    margin-bottom: 36px;
+}
+.img-desc .right a {
+    border: 1px solid #29d9d5;
+    color: #29d9d5;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 8px 25px;
+    font-weight: bold;
+}
+.img-desc .right a:hover {
+    background-color: #29d9d5;
+    color: #fff;
+ 
+}
+
+/*Depart CSS*/
+#popular-destination {
+    padding: 0 10% ;
+    margin-bottom: 50px;
+}
+#popular-destination .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 32px;
+}
+#popular-destination .content .box {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10%;
+    height: 250px;
+    transition: 0.5s;
+}
+#popular-destination .content .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10%;
+    text-align: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+.box .content  h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.box .content p {
+    padding: 2px;
+    font-size: 12px;
+}
+.box .content p:nth-child(3){
+    margin-bottom: 25px;
+}
+.box .content a {
+    margin-top: 60px;
+    padding: 10px 60px;
+    border: 2px solid #29d9d5;
+    color: #29d9d5;
+    font-weight: bold;
+}
+.box .content a:hover{
+    background-color: #29d9d5;
+    color: #fff;
+}
+.box:hover {
+    box-shadow: 0 0 10px #29d9d5;
+}
+.box:hover .content {
+    transform: translateX(0);
+}
+
+/* Contact CSS */
+#contact {
+    padding: 0 10%;
+    margin-bottom: 50px;
+    height: 90vh;
+}
+#contact form {
+    background-color: #fff;
+    border-radius: 5%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.left-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.left-right .left , .left-right .right  {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+#contact form label {
+    font-size: 14px;
+    padding: 10px 0;
+    font-weight: 600
+}
+#contact form input {
+    padding: 8px;
+    outline: 0;
+    border: 1px solid #999;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+    outline: 0;
+    width: 100%;
+    padding: 10px;
+}
+#contact form input:focus , textarea:focus {
+    border: 1px solid #29d9d5;
+}
+iframe {
+    height: 150px;
+    width: 100%;
+}
+#contact button {
+    width:fit-content;
+    padding: 8px 40px;
+    background-color: #111;
+    border: 1px solid #111;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#contact button:hover {
+    letter-spacing: 1px;
+}
+
+
+
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%; /* Largeur du footer */
+  background-color: #222;
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+footer p {
+    color: #fff;
+}
+footer p span {
+    color: #29d9d5;
+}
+.responsive-menu {
+    display: none;
+}
+/*train shedule*/
+
+
+table {
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: absolute;
+    overflow: hidden; 
+    width: 80%;
+    max-width: 768px;
+    min-height: 480px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+th, td {
+    padding: 15px; 
+    text-align: left;
+    color: #fff;
+}
+  
+  
+tr:nth-child(even) {
+    background-color: #003a7d; 
+}
+  
+tr:nth-child(odd) {
+    background-color: #1e73d5; 
+}
+  
+.titre-colonne {
+    background-color: #ffc107; 
+    text-align: left;
+    color: #222;
+    font-weight: bold; 
+}
+
+
+  
+/*Responsive*/
+@media (max-width:750px) {
+    header .menu {
+        display: none;
+    }
+    .login {
+        display: none;
+    }
+    /*Home responsive*/
+    #home h2 {
+        font-size: 18px;
+        -webkit-text-stroke: 0;
+        color: #fff;
+    }
+    #home h4 {
+        font-size: 28px;
+    }
+    #home p {
+        text-align: center;
+        font-size: 10px;
+    }
+    .find_trip {
+        width: 100%;
+        height: 200px;
+    }
+    .find_trip form {
+        flex-wrap: wrap;
+    }
+    .find_trip form div {
+        margin-top: 10px;
+        flex-direction: column;
+        width: 47%;
+    }
+    .find_trip form input[type="submit"]{
+        width: 47%;
+    }
+    .home-btn {
+        display:block;
+    }
+    /*Responsive A propos*/
+    .img-desc {
+        flex-direction: column;
+        width: 100%;
+    }
+    .img-desc .left , .img-desc .right {
+        width: 100%;
+    }
+    .img-desc .left video {
+        width: 100%;
+    }
+    .img-desc .left::after {
+        background-color: transparent;
+    }
+    .img-desc .left {
+        margin-bottom: 20px;
+    }
+
+    /*Responsive menu home*/
+    .responsive-menu {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+    }
+    .responsive-menu::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        background-color: #29d9d5;
+        width: 28px;
+        box-shadow: 0 10px 0 #29d9d5;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+    .responsive-menu.active::after {
+        box-shadow: 0 0 0 #29d9d5; 
+        transform: rotate(45deg);
+    }
+    .responsive-menu::before {
+        position: absolute;
+        content: "";
+        height: 3px;
+        background-color: #29d9d5;
+        width: 28px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .responsive-menu.active::before {
+        transform: rotate(-45deg);
+    }
+    header .menu.responsive {
+        display: flex;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        flex-direction: column;
+        background-color: #222;
+        align-items: unset;
+        animation: animate-menu 1s forwards;
+    }
+    header .menu.responsive li {
+        margin: 20px;
+        width: 100px;
+        padding-left: 20px;
+    }
+
+    @keyframes animate-menu {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(100%);
+        }
+    }
+    @keyframes move{
+        0%, 49.99%{
+            opacity: 0;
+            z-index: 1;
+        }
+        50%, 100%{
+            opacity: 1;
+            z-index: 5;
+        }
+    }
+}

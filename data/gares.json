@@ -1,0 +1,38 @@
+{
+  "marseille": {
+    "Marseille Saint-Charles": "stop_area:SNCF:87751003",
+    "Marseille Blancarde": "stop_area:SNCF:87753009",
+    "Marseille Saint-Antoine": "stop_area:SNCF:87751279",
+    "Marseille Saint-Joseph": "stop_area:SNCF:87753253"
+  },
+  "bordeaux": {
+    "Bordeaux Saint-Jean": "stop_area:SNCF:87581009",
+    "Bordeaux Ravezies": "stop_area:SNCF:87587011",
+    "Bordeaux Pessac": "stop_area:SNCF:87586006",
+    "Bordeaux Cenon": "stop_area:SNCF:87585009"
+  },
+  "nice": {
+    "Nice-Ville": "stop_area:SNCF:87756004",
+    "Nice-Saint-Augustin": "stop_area:SNCF:87758119",
+    "Nice-Riquier": "stop_area:SNCF:87756046",
+    "Nice-Saint-Isidore": "stop_area:SNCF:87756607"
+  },
+  "monaco": {
+    "Monaco-Monte-Carlo": "stop_area:SNCF:87751008",
+    "Monaco-Monte-Carlo Country Club": "stop_area:SNCF:87751676"
+  },
+  "paris": {
+    "Paris Gare du Nord": "stop_area:SNCF:87271007",
+    "Paris Gare de Lyon": "stop_area:SNCF:87686006",
+    "Paris Gare Montparnasse": "stop_area:SNCF:87391003",
+    "Paris Gare de l'Est": "stop_area:SNCF:87271024",
+    "Paris Gare Saint-Lazare": "stop_area:SNCF:87384008",
+    "Paris Gare d'Austerlitz": "stop_area:SNCF:87547000"
+  },
+  "toulouse": {
+    "Toulouse Matabiau": "stop_area:SNCF:87775007",
+    "Toulouse Saint-Agne": "stop_area:SNCF:87775023",
+    "Toulouse Saint-Cyprien-Arènes": "stop_area:SNCF:87775615",
+    "Toulouse Les Arènes": "stop_area:SNCF:87776043"
+  }
+}
