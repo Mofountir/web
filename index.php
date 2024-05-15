@@ -35,84 +35,8 @@
 <!-- section départ -->
 <section id="popular-destination">
     <h1 class="title">départs populaires</h1>
-    <div class="content">
-        <!-- box -->
-        <div class="box">
-            <img src="images/nice.jpg" alt="">
-            <div class="content">
-                <div>
-                    <h4>Nice</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Ea iusto ipsa repudiandae amet conseq.</p>
-                    <a href="departure.php?ville=nice">Lire Plus</a>
-                </div>
-            </div>
-        </div>
-        <!-- box -->
-        <!-- box -->
-        <div class="box">
-            <img src="images/marseille.jpg" alt="">
-            <div class="content">
-                <div>
-                    <h4>Marseille</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Ea iusto ipsa repudiandae amet conseq.</p>
-                    <a href="departure.php?ville=marseille">Lire Plus</a>
-                </div>
-            </div>
-        </div>
-        <!-- box -->
-        <!-- box -->
-        <div class="box">
-            <img src="images/monaco.jpg" alt="">
-            <div class="content">
-                <div>
-                    <h4>Monaco</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Ea iusto ipsa repudiandae amet conseq.</p>
-                    <a href="departure.php?ville=monaco">Lire Plus</a>
-                </div>
-            </div>
-        </div>
-        <!-- box -->
-        <!-- box -->
-        <div class="box">
-            <img src="images/paris.jpg" alt="">
-            <div class="content">
-                <div>
-                    <h4>Paris</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Ea iusto ipsa repudiandae amet conseq.</p>
-                    <a href="departure.php?ville=paris">Lire Plus</a>
-                </div>
-            </div>
-        </div>
-        <!-- box -->
-        <!-- box -->
-        <div class="box">
-            <img src="images/bordeaux.jpg" alt="">
-            <div class="content">
-                <div>
-                    <h4>Bordeaux</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Ea iusto ipsa repudiandae amet conseq.</p>
-                    <a href="departure.php?ville=bordeaux">Lire Plus</a>
-                </div>
-            </div>
-        </div>
-        <!-- box -->
-         <!-- box -->
-         <div class="box">
-            <img src="images/toulouse.jpg" alt="">
-            <div class="content">
-                <div>
-                    <h4>Toulouse</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Ea iusto ipsa repudiandae amet conseq.</p>
-                    <a href="departure.php?ville=toulouse">Lire Plus</a>
-                </div>
-            </div>
-        </div>
+    <div class="content" id='departures'>
+        
     </div>
 </section>
 

@@ -75,12 +75,17 @@ header  .logo a span {
  
 }
 /*depart*/
-
-.villes {
+.ville-selection {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 0;
+    margin-bottom: 20px;
+}
+
+.gares-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .gare {
@@ -91,15 +96,8 @@ header  .logo a span {
     border-radius: 10px;
     padding: 5px 20px;
     transition: 0.5s;
-    font-weight: bolder;
-    padding: 18px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px;
 }
 
 .gare.active {
@@ -111,6 +109,7 @@ header  .logo a span {
     background-color: #29d9d5;
     color: #fff;
 }
+
 
 /*Login page*/
 .container{
@@ -305,6 +304,8 @@ header  .logo a span {
     right: 0;
     transform: translateX(0);
 }
+
+
 
 .container.active .toggle-right{
     transform: translateX(200%);
